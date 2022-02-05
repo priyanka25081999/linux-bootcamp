@@ -7,6 +7,7 @@ You can use below utilities to manage files:
 	3. paste
 	4. join
 	5. split
+	6. wc
 
 1. **sort**:
 	

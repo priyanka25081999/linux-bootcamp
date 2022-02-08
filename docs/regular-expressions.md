@@ -44,4 +44,37 @@
        | echo "This is  a  test  file" | tr [:space:] '\t' | Translate white-space to tabs                |
        |---------------------------------------------------|----------------------------------------------|
           
+* **tee:**
+        'tee' takes the output from the command and while sending it to the stdout, it also saves it to a file. In simple words, it 'tees' the output stream from the command. One stream is displayed on the standard output and other is saved to a file. 
+        
+     **Example:**
+        
+        * To list contents of a directory on the screen and save the output of a file. The 'cat new-file' will show the output of 'ls -l' command.
+            $ ls -l | tee new-file
+
+* **wc:**
+        wc (word count) counts the number of lines, words and characters in a file or list of files.
+        
+     **Example:**
      
+        * Print only number of lines contained in a file:
+            $ wc -l <filename>
+       
+     **options:**
+        
+        -l : displays the number of lines.
+        -c : displays the number of bytes.
+        -w : displays the number of words.
+
+* **cut:**
+        cut is used for manipulating column-based files and is designed to extract specific columns. The default column separator is the **tab** character. Basically the cut command slices a line and extracts the text. It is necessary to specify option with command otherwise it gives error. If more than one file name is provided then data from each file is not precedes by its file name.
+        
+     **Example:**
+        
+        * To display second column delimited by a blank-space(""):
+            $ ls -l | cut -d "" -f 2  
+            -d is used for delimiter and -f is the field number, in the above example field number is 2. To view the new output, do 'cut -f2 <filename>' in the command prompt.
+        * To get specific column:
+            $ cut -d " " -f 3 <filename>
+            Here in this example, the field-number is 3.
+          

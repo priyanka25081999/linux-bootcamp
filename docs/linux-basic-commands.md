@@ -61,4 +61,29 @@
                     $ head sample_file.txt
             * To read first 5 lines of a file:
                     $ head -n 5 sample_file.txt
+   5. **tail:**
             
+        It reads the last few lines of each named file (by default - 10) and displays it on standard output. You can give a different number of lines in an option. *tail* is mostly useful when you are troubleshooting any issue using log files, as you want to see the most recent lines of output.
+        
+        **Example:**
+        
+            * To view last few lines of a file:
+                    $ tail sample_file.txt
+            * To read last 15 lines of a file:
+                    $ tail -n 15 sample_file.txt
+            * To continously read output of growing log file:
+                    $ tail -f sample_file.log
+            
+            The third command will continously display new lines of output in sample_file.log as soon as they appear. Thus, it enables user to monitor any current activity that is being reported and recorded.
+
+
+* **Viewing compressed files:**
+        
+        
+    To work with compressed files, the associated utilites have the letter 'z' prefixed to their name. For example, zcat, zless, zdiff and zgrep. These commands are used to search the contents of a compressed file without uncompressing it. It can be used with other options to extract data from the file, such as wildcards.
+        
+     **Example:**
+        
+        * To view contents of compressed file:
+              $ zcat compressedfile.txt.gz
+                   

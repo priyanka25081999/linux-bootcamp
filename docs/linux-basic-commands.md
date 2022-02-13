@@ -5,6 +5,26 @@
 3. **grep:**
 4. **sed:**
 
+      In order to create and then edit or extract contents from a file repetatively, this command can be used. sed stands for stream editor. Using this command, we can perform lots of functions on file like searching, find and replace, insertion or deletion. Also we can edit a file without opening it. 
+        
+      **Example:**
+      
+            |--------------------------------------------------------------------------------|
+            |      Command	                        |      Description                    |
+            |--------------------------------------------------------------------------------|
+            | sed s/pattern/replace_string/ file       | Substitute first string occurrence  |
+            |		                                | in every line 		      |
+            |--------------------------------------------------------------------------------|
+            | sed s/pattern/replace_string/g file      | Substitute all string occurrences   |
+            |		                                | in every line                       |
+            |--------------------------------------------------------------------------------|
+            | sed 1,3 s/pattern/replace_string/g file  | Substitute all string occurrences   |
+            |                                          | in a range of lines                 |
+            |--------------------------------------------------------------------------------|
+            | sed -i s/pattern/replace_string/g file   | Save changes for string substitution|
+            |                                          | in the same file                    |
+            |--------------------------------------------------------------------------------|
+
 * **File and Text manipulation utilities:**
     
    The command line tools for manipulating text files:

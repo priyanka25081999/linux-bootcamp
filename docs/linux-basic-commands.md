@@ -3,6 +3,46 @@
 1. **find:**
 2. **locate:**
 3. **grep:**
+            
+      It is a utility whose job is to search files for patterns and print out matches according to specified options. It basically stands for global regular expression print and it can work with more complicated regular expression which can contain wildcards and other special attributes.
+      
+      **Syntax:**
+      
+            |--------------------------------------------------------------------------------|
+            |      Command	                        |      Description                    |
+            |--------------------------------------------------------------------------------|
+            | grep [pattern] <filename>                | Search for a pattern in a file      |
+            |		                                | and print all matching lines        |
+            |--------------------------------------------------------------------------------|
+            | grep -v [pattern] <filename>             | Print all lines that do not         |
+            |		                                | match the pattern                   |
+            |--------------------------------------------------------------------------------|
+            | grep [0-9] <filename>                    | Print the lines that contain        |
+            |                                          | the numbers 0 through 9             |
+            |--------------------------------------------------------------------------------|
+            | grep -C 3 [pattern] <filename>           | Print context of lines (specified   |
+            |                                          | number of lines above and below the |
+            |                                          | pattern) for matching the pattern;  |
+            |                                          | here, the number of lines is        |
+            |                                          | specified as 3                      |                 
+            |--------------------------------------------------------------------------------|
+      
+      
+     **Examples:** 
+
+            1. To find the pattern "dog" in the file:
+                   $ grep dog sample_file.txt
+            2. To search the pattern "dog" and "cat" in all files of current directory by ignoring case:
+                       $ grep -i -e dog -e cat -r .
+                     * -i -> ignore case
+                     * -e -> use the next given pattern/string/special character for search
+                     * -r -> recurse through sub-directories
+            3. To print all lines start with word "dog":
+                       $ grep "^dog" sample_file.txt
+            4. To print all lines end with word "dog":
+                       $ grep "dog$" sample_file.txt
+                       $ grep d[a-p] sample_file.txt     
+      
 4. **sed:**
 
       In order to create and then edit or extract contents from a file repetatively, this command can be used. sed stands for stream editor. Using this command, we can perform lots of functions on file like searching, find and replace, insertion or deletion. Also we can edit a file without opening it. 

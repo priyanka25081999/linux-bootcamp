@@ -31,17 +31,21 @@
      **Examples:** 
 
             1. To find the pattern "dog" in the file:
-                   $ grep dog sample_file.txt
+                      $ grep dog sample_file.txt
+                      
             2. To search the pattern "dog" and "cat" in all files of current directory by ignoring case:
-                       $ grep -i -e dog -e cat -r .
-                     * -i -> ignore case
-                     * -e -> use the next given pattern/string/special character for search
-                     * -r -> recurse through sub-directories
+                      $ grep -i -e dog -e cat -r .
+                
+                   -i -> ignore case
+                   -e -> use the next given pattern/string/special character for search
+                   -r -> recurse through sub-directories
+                   
             3. To print all lines start with word "dog":
-                       $ grep "^dog" sample_file.txt
+                      $ grep "^dog" sample_file.txt
+                      
             4. To print all lines end with word "dog":
-                       $ grep "dog$" sample_file.txt
-                       $ grep d[a-p] sample_file.txt     
+                      $ grep "dog$" sample_file.txt
+                      $ grep d[a-p] sample_file.txt     
       
 4. **sed:**
 

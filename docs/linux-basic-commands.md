@@ -1,6 +1,39 @@
 * **Some basic linux commands**
 
 1. **find:**
+           
+      It is extremely powerful and flexible method for locating files based on their properties, including names.
+      
+      **Syntax:**
+           
+           $ find [location] [criteria] [action]
+          
+           Each of them above are optional and can be ommitted:
+           a. If no location is given -> current directory (.) is assumed.
+           b. If no criteria is given -> all files are displayed.
+           c. If no actions are given -> only names are listed.
+           
+      There are many options to find especially regarding selection of files to display. This can be done based on size, time of creation or last modified, type of file, owner etc. A quick synopsis is provided by *find --help* command.
+      This command is more aggressive search tool than locate or which commands. *find* is able to recursively search any given path for various files.
+      
+      **Example:**
+      
+           $ find . -name samplefile.txt
+           $ find /home *.jpg
+           $ find /etc -name "*.conf* -ls
+           
+           * -ls option is used to print long listing not only names.
+           
+           * To find a file based on content, we can also use grep:
+               $ find . -type f -print | xargs grep "searchstring"
+               $ find . -type f -exec grep "searchstring" '{}' \; -print
+               
+           * Here, the command goes through every object in the current directory(.) that is a file type -f and then runs grep for "searchstring" for 
+             every line that matches, then prints them on the screen (-print). The curly braces ({}) are a placeholder for those results matched by 
+             the linux find command, the {} go inside single quotes ('') so that grep isn't given a mishappen filename. The -exec command is ended with 
+             a semicolon (;) which also needs an escape (\) so that it doesn't end up being interpreted by the shell. Here, before -exec was implemented, 
+             xargs would have been used to create the same kind of output.
+
 2. **locate:**
            
       Another method of locating files is provided by the *locate* command. It searches entire filesystem(except for paths which have been excluded) and works off a database that is updated. That's why it is very fast. 

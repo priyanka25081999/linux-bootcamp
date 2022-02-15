@@ -2,6 +2,16 @@
 
 1. **find:**
 2. **locate:**
+           
+      Another method of locating files is provided by the *locate* command. It searches entire filesystem(except for paths which have been excluded) and works off a database that is updated. That's why it is very fast. 
+      It looks into it's database and reports the file location. *find* command doesn't use any database. It traverses all the directories and looks for files matching the given criterion. 
+      *locate* will only able to find files that were already in existence the last time the database was updated. For more details of the command type *locate --help* on terminal.
+      
+      **Example:**
+            
+            * To find all files on your system that have '.conf' in them:
+                 $ locate .conf
+
 3. **grep:**
             
       It is a utility whose job is to search files for patterns and print out matches according to specified options. It basically stands for global regular expression print and it can work with more complicated regular expression which can contain wildcards and other special attributes.

@@ -1,4 +1,4 @@
-* **Package Management in Linux**
+* **Package Management in Linux:**
     
       
   1. One of the most important function of any linux distribution is package management. Originally, most linux distributions like slackware were simply collections of tarball - 
